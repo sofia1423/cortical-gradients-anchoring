@@ -43,28 +43,24 @@ data/
 
 ### Data Description
 
-| File                                                          | Dimensions | Description |
-| ------------------------------------------------------------- | ---------- | ----------- |
-| `BrainMesh_Monkey_F99.nv`                                     |            |             |
-| `distance_matrix.mat`                                         |            |             |
-| `Empirical_and_Predicted_Rank_Difference.mat`                 |            |             |
-| `Empirical_Axis3_Afferent_WR.mat`                             |            |             |
-| `Empirical_Efferent_WR.mat`                                   |            |             |
-| `Empirical_Spectral_Gradient_during_Anesthesia_and_Awake.mat` |            |             |
-| `fmri_Gradient1_and2.mat`                                     |            |             |
-| `Function_Domain.txt`                                         |            |             |
-| `label_467.mat`                                               |            |             |
-| `name91.mat`                                                  |            |             |
-| `Power_for_all_frequency_bands.mat`                           |            |             |
-| `Power_for_all_frequency_bands.txt`                           |            |             |
-| `Predicted_Axis2_T1_T2.mat`                                   |            |             |
-| `Predicted_Axis3_Afferent_WR.mat`                             |            |             |
-| `Predicted_Efferent_WR.mat`                                   |            |             |
-| `Predicted_Spectral_Gradient_during_Anesthesia.txt`           |            |             |
-| `Predicted_Spectral_Gradient_during_Anesthesia_and_Awake.mat` |            |             |
-| `Predicted_Spectral_Gradient_during_Awake.txt`                |            |             |
-| `Receptor.mat`                                                |            |             |
-| `Structural_Connectome.mat`                                   |            |             |
+| File                                         | Dimensions | Description                                                                      |
+| -------------------------------------------- | ---------- | -------------------------------------------------------------------------------- |
+| `BrainMesh_Monkey_F99.nv`                    |            | Template of macaque cortex for BrainNet Viewer                                   |
+| `distance_matrix.mat`                        | 91 * 91    | Pairwise edge distances between brain regions                                    |
+| `Empirical_Predicted_Rank_Difference.mat`    | 91 * 2     | Column 1 for empirical, column 2 for predicted rank difference                   |
+| `Empirical_Axis3_Afferent_WR.mat`            | 91 * 1     | Empirical axis3,  afferent wiring range                                          |
+| `Empirical_Spectral_Gradient_Anes_Awake.mat` | 467 * 2    | Column 1 for anesthesia, column 2 for awake empirical spectral gradient          |
+| `fmri_Gradient1_and2.mat`                    | 91 * 2     | The first (column 1), the second (column 2) principal component of fMRI gradient |
+| `Function_Domain.txt`                        |            | Map for 5 function domains                                                       |
+| `label_467.mat`                              | 467 * 1    | Label of brain region for each channel                                           |
+| `name91.mat`                                 | 91 * 1     | Name for each brain region                                                       |
+| `Predicted_Axis2_T1_T2.mat`                  | 91 * 1     | Empirical axis2,  T1W/T2W                                                        |
+| `Predicted_Axis3_Afferent_WR.mat`            | 91 * 1     | Predicted axis3,  afferent wiring range                                          |
+| `Predicted_Spectral_Gradient_Anes.txt`       |            | Predicted spectral gradient during anesthesia state                              |
+| `Predicted_Spectral_Gradient_Anes_Awake.mat` | 91 * 2     | Predicted spectral gradient for anethesia (column 1), for wakefulness (column2)  |
+| `Predicted_Spectral_Gradient_Awake.txt`      |            | Predicted spectral gradient during awake state                                   |
+| `Receptor.mat`                               | 91 * 1     | First principal component of 14 receptors                                        |
+| `Structural_Connectome.mat`                  | 91 * 91    | Directed weighted structural network                                             |
 
 
 
@@ -150,7 +146,12 @@ code/
 ```bash
 
 # Install dependencies
-pip install -r requirements.txt
+
+pip install pandas 2.2.3
+pip install numpy 2.2.5
+pip install scipy 1.15.2
+pip install umap-learn 0.5.7
+
 ```
 
 
