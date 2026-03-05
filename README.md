@@ -211,15 +211,6 @@ pip install umap-learn 0.5.7
 - **Data size**: Most files are small CSV/text files (<1MB each)
 - **Spatial coordinates**: All region-level data uses M132 atlas parcellation (91 regions)
 
-## 📚 Citation
-
-If you use this code or data in your research, please cite:
-
-```
-Ma, A., Ren, Z., Li, Y., Yu, S., Zhou, C., Hilgetag, C.C., & Chen, Y. (2026). 
-Anchoring of anesthetized and awake brain states to natural structural axes of the cerebral cortex.
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License.  
